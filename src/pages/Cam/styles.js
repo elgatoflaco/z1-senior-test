@@ -49,16 +49,22 @@ export const Title = styled.h1`
   font-weight: 800;
   text-align: center;
   /* z-index: 3; */
-  color: #000;
+  color: #FFF;
   width: 100%;
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  position: absolute;
+  z-index: 999;
+  top: 110px;
 `;
 export const Paragraph = styled.p`
   font-size: 16px;
   text-align: center;
   line-height: 25px;
-  color: #000;
+  color: #FFF;
   width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 160px;
 `;
 export const CancelButton = styled(Link)`
   text-decoration: none !important;
@@ -66,6 +72,7 @@ export const CancelButton = styled(Link)`
   color: white;
   bottom: 10%;
   left: 50%;
+    transform: translate3d(-50%, -50%, 0);
   font-size: 18px;
   text-align: center;
   z-index: 99999;
@@ -82,4 +89,39 @@ export const CheckIcon = styled(CircleCheck)`
   width: 12px;
   height: 12px;
   color: #69cc8b;
+`;
+
+export const Overlay = styled.div`
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  width: 290px;
+  height: 180px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 999px rgba(0, 0, 0, 0.8);
+    border-radius: 23px;
+  }
+  &::after {
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    background: transparent;
+    border: solid 2px;
+    border-color: ${props =>
+      (props.status === "Accepted" && "#69cc8b") ||
+      (props.status === "Rejected" && "#c00101")};
+    width: 290px;
+    height: 180px;
+    border-radius: 25px;
+  }
 `;

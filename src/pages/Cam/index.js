@@ -4,8 +4,9 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { navigate } from "@reach/router";
 import {
   CameraRealtime,
-  CameraOverlay,
-  TakePhoto,
+  Overlay,
+  Title,
+  Paragraph,
   CancelButton,
   PictureTaken,
   CheckIcon
@@ -54,9 +55,9 @@ function CamPage(props) {
           if (response.summary.outcome === "Approved") {
             setStopInterval(false);
             setStatus("Accepted");
-            setTimeout(() => {
-              navigate(`/`)
-            }, 3000);
+            // setTimeout(() => {
+            //   navigate(`/`)
+            // }, 3000);
             console.log("Accepted");
           } else {
             setStatus("Rejected");
@@ -90,9 +91,15 @@ function CamPage(props) {
                 videoConstraints={videoConstraints}
               />
             </CameraRealtime>
-            <CameraOverlay status={status} />
+            <Overlay status={status} />
+            {/* <CameraOverlay status={status} /> */}
             { !stopInterval ? <PictureTaken><CheckIcon/> {" "}Picture Taken</PictureTaken>: null}
-            <TakePhoto onClick={capture}>Capture photo</TakePhoto>
+            <Title>Take picture</Title>
+
+        <Paragraph>
+          Fit your ID card inside the frame.
+          <br /> The picture will be taken automatically.
+        </Paragraph>
             <CancelButton to="/" onClick={e => handleClick(e)}>
               Cancel
             </CancelButton>
