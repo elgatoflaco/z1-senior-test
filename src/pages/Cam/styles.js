@@ -81,7 +81,7 @@ export const PictureTaken = styled.div`
   z-index: 999;
   position: absolute;
   width: 100%;
-  bottom: 20%;
+  bottom: -20%;
   text-align: center;
   color: white;
 `;

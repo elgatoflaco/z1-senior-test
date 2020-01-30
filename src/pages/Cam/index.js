@@ -91,9 +91,11 @@ function CamPage(props) {
                 videoConstraints={videoConstraints}
               />
             </CameraRealtime>
-            <Overlay status={status} />
-            {/* <CameraOverlay status={status} /> */}
+            <Overlay status={status} >
             { !stopInterval ? <PictureTaken><CheckIcon/> {" "}Picture Taken</PictureTaken>: null}
+            </Overlay>
+            {/* <CameraOverlay status={status} /> */}
+            
             <Title>Take picture</Title>
 
         <Paragraph>
