@@ -55,9 +55,9 @@ function CamPage(props) {
           if (response.summary.outcome === "Approved") {
             setStopInterval(false);
             setStatus("Accepted");
-            // setTimeout(() => {
-            //   navigate(`/`)
-            // }, 3000);
+            setTimeout(() => {
+              navigate(`/`)
+            }, 3000);
             console.log("Accepted");
           } else {
             setStatus("Rejected");
