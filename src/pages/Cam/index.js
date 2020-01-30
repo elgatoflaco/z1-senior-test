@@ -20,9 +20,7 @@ const videoConstraints = {
   // facingMode: { exact: 'environment' }
 };
 
-function onUserMedia(params) {
-  console.log("hola");
-}
+
 function CamPage(props) {
   const webcamRef = React.useRef(null);
   const [stopInterval, setStopInterval] = useState(true);
@@ -87,7 +85,6 @@ function CamPage(props) {
                 audio={false}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
-                onUserMedia={onUserMedia()}
                 videoConstraints={videoConstraints}
               />
             </CameraRealtime>
