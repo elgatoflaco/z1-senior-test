@@ -1,5 +1,20 @@
 import styled from "styled-components";
 import { Link } from "@reach/router";
+import { Check } from "../../components/icons/check";
+import { Times } from "../../components/icons/times";
+export const CheckIcon = styled(Check)`
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  margin-right: 10px;
+`;
+export const TimesIcon = styled(Times)`
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  margin-right: 10px;
+`;
+
 export const RetakePicture = styled(Link)`
   position: absolute;
   top: 50%;
@@ -36,8 +51,8 @@ export const ContainerImagen = styled.div`
 export const LabelImagen = styled.span`
   position: absolute;
   bottom: -15px;
-  right: 16px;
-  width: 120px;
+  right: 30px;
+  width: 100px;
   height: 30px;
   background: ${props =>
     (props.status === "Accepted" && "#69cc8b") ||
@@ -54,7 +69,6 @@ export const LabelImagen = styled.span`
   color: #fff;
   border-radius: 5px;
 `;
-
 
 export const Imagen = styled.img`
   max-width: 265px;
