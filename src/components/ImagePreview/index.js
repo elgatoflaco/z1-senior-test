@@ -5,7 +5,7 @@ import { ContainerImagen, Imagen, LabelImagen, RetakePicture, CheckIcon, TimesIc
 
 export const ImagePreview = ({ imgSrc, status }) => {
   return (
-    <ContainerImagen>
+    <ContainerImagen status={status}>
       <Imagen src={imgSrc} width="265" height="160" />
       <LabelImagen status={status}>
         {status === "Accepted" ? <CheckIcon/> : <TimesIcon/>}

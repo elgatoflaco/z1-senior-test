@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "@reach/router";
 
 export const Container = styled.div`
-  max-width: 600px;
+  max-width: 380px;
   height: 100vh;
   margin: auto;
   border: 1px solid #ccc;

@@ -74,6 +74,22 @@ export const SkeletonBar3 = styled.div`
   margin-left: 20px;
   border-radius: 5px;
 `;
+export const SkeletonBar4 = styled.div`
+  width: 75px;
+  height: 10px;
+  background: #f4f4f4;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+`;
+export const SkeletonBar5 = styled.div`
+  width: 100px;
+  height: 10px;
+  background: #f4f4f4;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+`;
 export const SkeletonAvatar = styled.div`
   width: 105px;
   height: 85px;

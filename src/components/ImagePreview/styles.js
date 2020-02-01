@@ -45,14 +45,18 @@ export const ContainerImagen = styled.div`
   flex-direction: row;
   justify-content: center;
   position: relative;
-  border: 2px solid #69cc8b;
+  border: 2px solid;
+  border-color: ${props =>
+      (props.status === "Accepted" && "#69cc8b") ||
+      (props.status === "Rejected" && "#c00101")};
+
   border-radius: 20px;
 `;
 export const LabelImagen = styled.span`
   position: absolute;
   bottom: -15px;
   right: 30px;
-  width: 100px;
+  width: 110px;
   height: 30px;
   background: ${props =>
     (props.status === "Accepted" && "#69cc8b") ||
